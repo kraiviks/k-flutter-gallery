@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gallery/screens/image_screen.dart';
+import 'screens/unsplash_list_screen.dart';
+import 'models/photo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      home: const Text('Init'),
+      routes: {
+        '/': (context) => UnsplashListScreen(),
+        '/photo': (context) => ImageScreen(
+            photo: ModalRoute.of(context)!.settings.arguments as Photo),
+      },
     );
   }
 }
