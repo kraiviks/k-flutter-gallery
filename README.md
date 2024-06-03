@@ -1,3 +1,3 @@
 # flutter_gallery
 
-A new Flutter project.
+Simple unsplash gallery on flutter
